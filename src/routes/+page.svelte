@@ -1,5 +1,5 @@
 <main class="flex h-screen items-center justify-center bg-zinc-950 p-32">
-  <div class="flex h-full justify-center items-center gap-16 w-full z-10">
+  <div class="flex h-full justify-center lg:items-center  gap-16 w-full z-10">
     <div class="flex flex-col justify-start">
       <h1
         class="font-display text-8xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
@@ -37,19 +37,19 @@
       </button>
     </div>
     <img
-      class="object-scale-down h-[120%]"
+      class="object-scale-down h-[140%] lg:block hidden -z-10 -ml-40"
       src="/hero image.png"
       alt="Hero displaying a couple of projects."
     />
   </div>
   <div
-    class="text-zinc-900 opacity-50 absolute left-0 top-0 text-6xl font-serif w-[130vw] overflow-clip max-h-full max-w-screen"
+    class="text-zinc-900 opacity-50 absolute left-0 top-0 lg:text-6xl text-4xl font-serif text-justify overflow-clip h-full w-screen"
   >
-  {#each Array(10) as _}
-    Frontend Development &bull; Backend Development &bull; Electronics &bull;
-    Mechanical Engineering &bull; Linux Admin &bull; Embedded Development &bull;
-    Typography &bull; Web Design &bull; Linguistics Nerdiness &bull; PCB Design
-    &bull; Thinking about Stuff Real Hard &bull; Frontend Development &bull;
+  {#each Array(20) as _}
+    Frontend Development &bull;&nbsp;Backend Development &bull; Electronics &bull;
+    Mechanical Engineering &bull;&nbsp;Linux Admin &bull; Embedded Development &bull;
+    Typography &bull;&nbsp;Web Design &bull; Linguistics Nerdiness &bull; PCB Design
+    &bull;&nbsp;Thinking about Stuff Real Hard &bull; Frontend Development &bull;
   {/each}
   </div>
 </main>
