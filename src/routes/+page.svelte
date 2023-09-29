@@ -1,5 +1,5 @@
 <main class="flex h-screen items-center justify-center bg-zinc-950 p-32">
-  <div class="flex h-full justify-center items-center gap-16 w-full">
+  <div class="flex h-full justify-center items-center gap-16 w-full z-10">
     <div class="flex flex-col justify-start">
       <h1
         class="font-display text-8xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
@@ -41,6 +41,15 @@
       src="/hero image.png"
       alt="Hero displaying a couple of projects."
     />
-    <div class="text-zinc-900" />
+  </div>
+  <div
+    class="text-zinc-900 opacity-50 absolute left-0 top-0 text-6xl font-serif w-[130vw] overflow-clip max-h-full max-w-screen"
+  >
+  {#each Array(10) as _}
+    Frontend Development &bull; Backend Development &bull; Electronics &bull;
+    Mechanical Engineering &bull; Linux Admin &bull; Embedded Development &bull;
+    Typography &bull; Web Design &bull; Linguistics Nerdiness &bull; PCB Design
+    &bull; Thinking about Stuff Real Hard &bull; Frontend Development &bull;
+  {/each}
   </div>
 </main>
