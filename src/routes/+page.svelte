@@ -1,6 +1,6 @@
-<main class="flex h-screen items-center justify-center bg-zinc-950 p-32">
-  <div class="flex h-full justify-center lg:items-center  gap-16 w-full z-10">
-    <div class="flex flex-col justify-start">
+<section class="flex h-screen items-center justify-center bg-zinc-950 p-40">
+  <div class="flex h-full lg:items-center justify-between w-full z-10">
+    <div class="flex flex-col justify-start flex-1 lg:-mr-40">
       <h1
         class="font-display text-8xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
       >
@@ -37,19 +37,54 @@
       </button>
     </div>
     <img
-      class="object-scale-down h-[140%] lg:block hidden -z-10 -ml-40"
+      class="object-scale-down w-[80%] lg:block hidden -z110 flex-initial"
       src="/hero image.png"
       alt="Hero displaying a couple of projects."
     />
   </div>
   <div
-    class="text-zinc-900 opacity-50 absolute left-0 top-0 lg:text-6xl text-4xl font-serif text-justify overflow-clip h-full w-screen"
+    class="text-zinc-900 opacity-50 absolute left-0 top-0 lg:text-6xl text-4xl font-serif text-justify overflow-clip h-full w-screen select-none"
   >
-  {#each Array(20) as _}
-    Frontend Development &bull;&nbsp;Backend Development &bull; Electronics &bull;
-    Mechanical Engineering &bull;&nbsp;Linux Admin &bull; Embedded Development &bull;
-    Typography &bull;&nbsp;Web Design &bull; Linguistics Nerdiness &bull; PCB Design
-    &bull;&nbsp;Thinking about Stuff Real Hard &bull; Frontend Development &bull;
-  {/each}
+    {#each Array(20) as _}
+      Frontend Development &bull;&nbsp;Backend Development &bull; Electronics
+      &bull; Mechanical Engineering &bull;&nbsp;Linux Admin &bull; Embedded
+      Development &bull; Typography &bull;&nbsp;Web Design &bull; Linguistics
+      Nerdiness &bull; PCB Design &bull;&nbsp;Thinking about Stuff Real Hard
+      &bull; Frontend Development &bull;
+    {/each}
   </div>
-</main>
+</section>
+<section class="bg-zinc-950 text-zinc-100 p-32">
+  <div class="flex gap-16">
+    <div
+      class="w-2/6 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative"
+      >
+    <img
+      src="/portrait.jpg"
+      alt="Portrait of myself"
+      class="rounded-xl h-full"
+    />
+    <span class="absolute bottom-4 ml-4 z-10">That's me!</span>
+    </div>
+    <section class="flex-1 flex flex-col gap-4 bg-zinc-900 p-8 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow">
+      <h1
+        class="font-display text-5xl -ml-1 bg-clip-text text-transparent bg-display-gradient-lighter"
+      >
+        Passionate about software development since the first day.
+      </h1>
+      <p class="font-serif text-xl text-zinc-100">
+        My experience stems from great personal interest in everything
+        engineering/computer related since childhood. I have been programming as
+        a pastime since 2013.
+      </p>
+      <div class="flex flex-col gap-4 w-full items-end mt-4">
+        <div class="w-[90%] font-bold bg-amber-500 px-4 py-2 rounded-lg">Frontend ★</div>
+        <div class="w-[75%] font-bold bg-amber-500 px-4 py-2 rounded-lg">Backend ★</div>
+        <div class="w-[65%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">Data-Science</div>
+        <div class="w-[35%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">Embedded</div>
+        <div class="w-[30%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">Gamedev</div>
+      </div>
+      <p class="font-serif text-sm text-zinc-500">Note: unmarked x axis for added credibility.</p>
+    </section>
+  </div>
+</section>
