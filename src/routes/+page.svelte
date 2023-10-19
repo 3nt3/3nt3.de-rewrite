@@ -1,4 +1,5 @@
 <script>
+  import Carousel from "../components/Carousel.svelte";
 </script>
 
 <nav
@@ -81,14 +82,14 @@
     class="flex lg:flex-row flex-col-reverse lg:gap-16 gap-8 items-center lg:items-stretch"
   >
     <div
-      class="lg:w-2/6 w-3/4 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative"
+      class="lg:w-2/6 w-full lg:h-auto rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative overflow-hidden"
     >
       <img
         src="/portrait.jpg"
         alt="Portrait of myself"
-        class="rounded-xl h-full object-cover"
+        class="rounded-xl w-full h-96 lg:h-full object-cover overflow-hidden"
       />
-      <span class="absolute bottom-4 ml-4 z-10">That's me!</span>
+      <span class="absolute bottom-4 ml-4 z-10 font-serif text-xl">That's me!</span>
     </div>
     <section
       class="flex-1 flex flex-col gap-4 bg-zinc-900 p-8 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow"
@@ -107,19 +108,20 @@
         <div class="w-[90%] font-bold bg-amber-500 px-4 py-2 rounded-lg">
           Frontend ★
         </div>
+        <div class="w-[80%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+          UI/UX Design
+        </div>
         <div class="w-[75%] font-bold bg-amber-500 px-4 py-2 rounded-lg">
           Backend ★
         </div>
         <div class="w-[65%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
-          Data-Science
+          Data-Science/Web-Scraping
         </div>
         <div class="w-[35%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Embedded
         </div>
-        <div class="w-[30%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
-          Gamedev
-        </div>
       </div>
+      <p class="font-serif">★ Featured Skill</p>
       <p class="font-serif text-sm text-zinc-500">
         Note: unmarked x axis for added credibility.
       </p>
@@ -132,5 +134,8 @@
   >
     PROJECTS
   </h1>
-
+  <h2 class="italic font-serif text-xl mx-auto max-w-fit">
+    What I've been up to.
+  </h2>
+  <Carousel />
 </section>
