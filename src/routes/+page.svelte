@@ -1,4 +1,9 @@
-<section class="flex h-screen items-center justify-center bg-zinc-950 p-40">
+<nav class="sticky top-0 w-screen flex bg-zinc-900 h-16 z-30 lg:px-40 px-20 items-center font-serif text-2xl text-zinc-100">
+  <ul>
+    <li>Nia Schlegel</li>
+  </ul>
+</nav>
+<main class="flex lg:h-screen items-center justify-center bg-zinc-950 lg:p-40 px-20 py-40">
   <div class="flex h-full lg:items-center justify-between w-full z-10">
     <div class="flex flex-col justify-start flex-1 lg:-mr-40">
       <h1
@@ -31,7 +36,7 @@
       </h2>
 
       <button
-        class="text-zinc-100 mt-8 mr-auto bg-purple-500 px-24 py-5 text-2xl rounded-full shadow-[0px_0px_30px_0px_rgba(161,103,234,0.60)]"
+        class="text-zinc-100 mt-8 mr-auto bg-purple-500 px-24 py-5 text-2xl rounded-full hover:shadow-[0px_0px_30px_0px_rgba(161,103,234,0.60)] transition-shadow"
       >
         Find out more
       </button>
@@ -43,7 +48,7 @@
     />
   </div>
   <div
-    class="text-zinc-900 opacity-50 absolute left-0 top-0 lg:text-6xl text-4xl font-serif text-justify overflow-clip h-full w-screen select-none"
+    class="text-zinc-900 opacity-50 absolute left-0 top-0 lg:text-6xl text-4xl font-serif text-justify overflow-clip lg:h-full w-screen select-none"
   >
     {#each Array(20) as _}
       Frontend Development &bull;&nbsp;Backend Development &bull; Electronics
@@ -53,9 +58,9 @@
       &bull; Frontend Development &bull;
     {/each}
   </div>
-</section>
+</main>
 <section class="bg-zinc-950 text-zinc-100 p-32">
-  <div class="flex gap-16">
+  <div class="flex lg:flex-row flex-col-reverse gap-16">
     <div
       class="w-2/6 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative"
       >
