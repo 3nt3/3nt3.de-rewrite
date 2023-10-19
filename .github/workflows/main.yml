@@ -18,6 +18,6 @@ jobs:
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
     - name: connect and pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && nvm exec v21.0.0 npm install && nvm exec v21.0.0 npm run build && sudo rm -rf /var/www/3nt3.de/* && sudo cp -r build/* /var/www/3nt3.de && exit"
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "source ~/.zshrc && cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && nvm exec v21.0.0 npm install && nvm exec v21.0.0 npm run build && sudo rm -rf /var/www/3nt3.de/* && sudo cp -r build/* /var/www/3nt3.de && exit"
     - name: cleanup
       run: rm -rf ~/.ssh
