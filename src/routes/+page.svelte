@@ -11,7 +11,7 @@
     </li>
     <ul class="flex gap-8 font-bold">
       <li class=""><a href="#about">About</a></li>
-      <li class=""><a href="#contact">Contact</a></li>
+      <li class=""><a href="/">Contact</a></li>
     </ul>
   </ul>
 </nav>
