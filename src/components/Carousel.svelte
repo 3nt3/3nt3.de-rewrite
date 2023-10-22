@@ -11,6 +11,7 @@
 
   import Fa from "svelte-fa";
   import {
+    faC,
     faIcons,
     faLink,
     type IconDefinition,
@@ -20,6 +21,12 @@
     faNodeJs,
     faNode,
     faGithub,
+    faRust,
+    faJs,
+    faGolang,
+    faPython,
+    faHtml5,
+    faCss3,
   } from "@fortawesome/free-brands-svg-icons";
 
   interface Project {
@@ -53,9 +60,9 @@
       description:
         "A full-stack project for my school to help connect students with tutors. Built with React and Next.js",
       image: "digital.webp",
-      link: "https://nachhilfe.gymhaan.de",
+      link: "https://github.com/bohlebots-digital",
       icons: [],
-      faIcons: [faReact, faNodeJs],
+      faIcons: [faC, faRust],
     },
   ];
 
@@ -100,6 +107,14 @@
       <div
         class="bg-zinc-900 h-72 rounded-xl w-full p-6 pb-10 flex justify-center flex-col gap-3 pt-10"
       >
+        <div>
+          <div class="flex gap-3 overflow-hidden">
+            <!-- svelte-ignore missing-declaration -->
+            {#each [faRust, faJs, faPython, faC, faGolang, faHtml5, faCss3] as icon}
+              <Fa {icon} />
+            {/each}
+          </div>
+        </div>
         <h1 class="font-serif italic text-3xl">
           Check out my GitHub for more.
         </h1>
