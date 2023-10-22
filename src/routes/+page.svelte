@@ -11,7 +11,7 @@
     </li>
     <ul class="flex gap-8 font-bold">
       <li class=""><a href="#about">About</a></li>
-      <li class=""><a href="/">Contact</a></li>
+      <li class=""><a href="#contact">Contact</a></li>
     </ul>
   </ul>
 </nav>
@@ -50,7 +50,7 @@
       </h2>
 
       <a
-        class="block text-zinc-200 mt-8 mr-auto bg-purple-500 px-24 py-5 text-2xl rounded-full hover:shadow-[0px_0px_30px_0px_rgba(161,103,234,0.60)] transition-shadow"
+        class="block text-zinc-200 mt-8 mr-auto bg-purple-500 px-24 py-5 text-2xl rounded-full hover:shadow-[0px_0px_30px_0px_rgba(161,103,234,0.60)] transition-shadow ring-zinc-200 active:ring-3"
         href="#about"
       >
         Find out more
@@ -102,7 +102,7 @@
       <p class="font-serif text-xl text-zinc-200">
         My experience stems from great personal interest in everything
         engineering/computer related since childhood. I have been programming as
-        a pastime since 2013.
+        a pastime since 2013. My aspiration is basically to know everything.
       </p>
       <div class="flex flex-col gap-4 w-full items-end mt-4">
         <div class="w-[90%] font-bold bg-amber-500 px-4 py-2 rounded-lg">
@@ -117,8 +117,11 @@
         <div class="w-[65%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Data-Science/Web-Scraping
         </div>
-        <div class="w-[35%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+        <div class="w-[42%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Embedded
+        </div>
+        <div class="w-[30%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+          Mechanical Eng.
         </div>
       </div>
       <p class="font-serif">★ Featured Skill</p>
@@ -137,5 +140,5 @@
   <h2 class="italic font-serif text-xl mx-auto max-w-fit">
     What I've been up to.
   </h2>
-  <Carousel />
+  <Carousel class="mt-10"/>
 </section>
