@@ -12,14 +12,12 @@
   import Fa from "svelte-fa";
   import {
     faC,
-    faIcons,
     faLink,
     type IconDefinition,
   } from "@fortawesome/free-solid-svg-icons";
   import {
     faReact,
     faNodeJs,
-    faNode,
     faGithub,
     faRust,
     faJs,
@@ -64,6 +62,15 @@
       icons: [],
       faIcons: [faC, faRust],
     },
+    {
+      title: "Monster Price Scraping",
+      description:
+        "A series of webscrapers and a mobile app to help me find the best deals on Monster Energy drinks. Built with Rust and Flutter.",
+      image: "monster.webp",
+      link: "https://github.com/3nt3/monster-discount",
+      icons: ["./FlutterLogo"],
+      faIcons: [faRust],
+    },
   ];
 
   let index = 0;
@@ -71,7 +78,7 @@
 
 <MediaQuery query="(max-width: 1024px)" let:matches>
   <Splide
-    options={{ type: "loop", perPage: matches ? 2 : 3, perMove: 1 }}
+    options={{  perPage: matches ? 2 : 3, perMove: matches ? 2 : 3 }}
     class={className}
   >
     {#each projects as p}
@@ -81,9 +88,10 @@
           alt={p.title}
           class="h-72 object-cover rounded-xl w-full"
         />
-        <h2 class="max-w-fit mt-2 text-lg font-bold flex gap-1 wrap">
-          {p.title} <a href={p.link}><Fa icon={faLink} class="inline" /></a>
-          <div class="inline-flex gap-1 items-center leading-5">
+        <h2 class="max-w-fit mt-2 text-xl font-bold flex gap-1 wrap">
+          <a href={p.link}>{p.title} <Fa icon={faLink} class="inline mx-1" /></a
+          >
+          <div class="inline-flex gap-2 items-center leading-5 mr-2">
             {#each p.icons as icon}
               {#await loadComponent(icon) then component}
                 <div class="inline-block w-5">
@@ -92,15 +100,13 @@
               {/await}
             {/each}
           </div>
-          <div class="inline-flex gap-1 items-center">
+          <div class="inline-flex gap-2 items-center">
             {#each p.faIcons as icon}
-              <div class="inline-block w-5">
-                <Fa {icon} />
-              </div>
+              <Fa {icon} />
             {/each}
           </div>
         </h2>
-        <p class="max-w-fit text-sm">{p.description}</p>
+        <p class="max-w-fit text-lg font-serif">{p.description}</p>
       </SplideSlide>
     {/each}
     <SplideSlide>
