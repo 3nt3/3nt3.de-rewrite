@@ -56,7 +56,7 @@
     {
       title: "Soccerbot at Bohlebots",
       description:
-        "A full-stack project for my school to help connect students with tutors. Built with React and Next.js",
+        "A semi autonomous soccer robot built with Rust and C. Took part in the RoboCup Junior Germany competition in 2022",
       image: "digital.webp",
       link: "https://github.com/bohlebots-digital",
       icons: [],
