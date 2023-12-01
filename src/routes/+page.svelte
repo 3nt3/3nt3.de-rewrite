@@ -97,7 +97,7 @@
       <h1
         class="font-display text-5xl -ml-1 bg-clip-text text-transparent bg-display-gradient-lighter"
       >
-        Passionate about software development since the first day.
+        Passionate about software development since forever.
       </h1>
       <p class="font-serif text-xl text-zinc-200">
         My experience stems from great personal interest in everything
