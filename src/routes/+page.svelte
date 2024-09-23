@@ -1,5 +1,9 @@
 <script>
   import Carousel from "../components/Carousel.svelte";
+  import Fa from "svelte-fa";
+  import {
+    faPaperPlane
+  } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <nav
@@ -131,7 +135,7 @@
     </section>
   </div>
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:p-40 lg:pt-12 p-20 z-10 pt-12">
+<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-20 z-10 py-12">
   <h1
     class="font-display bg-clip-text text-transparent bg-display-gradient-lighter text-5xl max-w-fit mx-auto"
   >
@@ -141,4 +145,48 @@
     What I've been up to.
   </h2>
   <Carousel class="mt-10"/>
+</section>
+<section class="text-zinc-200 bg-zinc-950 lg:p-40 lg:pt-12 p-20 z-10 pt-12">
+  <div class="bg-zinc-900 p-12 rounded-xl gap-16 flex">
+    <div class="w-2/6 min-h-[300px] hidden lg:block text-clip">
+      <h1
+        class="font-display text-zinc-500 text-5xl break-all [word-spacing: -20px] text-block select-none aria-hidden"
+      >
+        LEAVE A MESSAGE AT THE TONE —
+        LEAVE A MESSAGE AT THE TONE —
+        LEAVE A MESSAGE AT THE TONE
+      </h1>
+    </div>
+    <div class="flex flex-col w-full items-center">
+      <h1 class="font-display text-5xl bg-display-gradient-lighter bg-clip-text text-transparent">
+        CONTACT ME
+      </h1>
+      <h2 class="italic font-serif text-xl text-zinc-200">
+        For personal or business inquiries. Only say nice things.
+      </h2>
+      <form class="w-full flex flex-col mt-8">
+        <div class="w-full flex flex-col gap-4 lg:flex-row justify-stretch>">
+          <input
+            type="text"
+            placeholder="Name"
+            class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg flex-1"
+          />
+          <input
+            type="email"
+            placeholder="E-Mail"
+            class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg flex-1"
+          />
+        </div>
+        <textarea
+          placeholder="Message"
+          class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg mt-4 h-48"
+        ></textarea>
+        <button
+          class="bg-purple-500 text-zinc-200 p-4 mt-4 font-bold rounded-full hover:shadow-[0px_0px_10px_0px_rgba(161,103,234,0.60)] transition-shadow ring-zinc-200 active:ring-3"
+        >
+          GO FOR IT <Fa class="inline" icon={faPaperPlane} />
+        </button>
+      </form>
+    </div>
+  </div>
 </section>

@@ -13,6 +13,8 @@
   import {
     faC,
     faLink,
+    faBicycle,
+    faWrench,
     type IconDefinition,
   } from "@fortawesome/free-solid-svg-icons";
   import {
@@ -31,19 +33,19 @@
     title: string;
     description: string;
     image: string;
-    link: string;
+    link?: string;
     icons: string[];
     faIcons: IconDefinition[];
   }
   const projects: Project[] = [
-    {
-      title: "Nia's Portfolio",
-      description: "This website! I built it with SvelteKit and TailwindCSS.",
-      image: "portfolio.webp",
-      link: "https://github.com/3nt3/3nt3.de-rewrite",
-      icons: ["./SvelteLogo", "./TailwindLogo"],
-      faIcons: [],
-    },
+    // {
+    //   title: "Nia's Portfolio",
+    //   description: "This website! I built it with SvelteKit and TailwindCSS.",
+    //   image: "portfolio.webp",
+    //   link: "https://github.com/3nt3/3nt3.de-rewrite",
+    //   icons: ["./SvelteLogo", "./TailwindLogo"],
+    //   faIcons: [],
+    // },
     {
       title: "Gymhaan Tutoring Website",
       description:
@@ -58,9 +60,17 @@
       description:
         "A semi autonomous soccer robot built with Rust and C. Took part in the RoboCup Junior Germany competition in 2022",
       image: "digital.webp",
-      link: "https://github.com/bohlebots-digital",
+      link: "https://digital-website-rho.vercel.app",
       icons: [],
       faIcons: [faC, faRust],
+    },
+    {
+      title: "Homemade Electric Cargo Bike",
+      description:
+        "A cargo bike I built with a friend. It's made from a regular bike and steel tubing. It can carry a EURO pallet. Plans by Phil Vandelay",
+      image: "bike.webp",
+      faIcons: [faBicycle, faWrench],
+      icons: []
     },
     {
       title: "Monster Price Scraping",
@@ -89,8 +99,11 @@
           class="h-72 object-cover rounded-xl w-full"
         />
         <h2 class="max-w-fit mt-2 text-xl font-bold flex gap-1 wrap">
-          <a href={p.link}>{p.title} <Fa icon={faLink} class="inline mx-1" /></a
-          >
+          {#if p.link}
+            <a href={p.link}>{p.title} <Fa icon={faLink} class="inline mx-1" /></a>
+          {:else}
+            <span>{p.title}</span>
+          {/if}
           <div class="inline-flex gap-2 items-center leading-5 mr-2">
             {#each p.icons as icon}
               {#await loadComponent(icon) then component}
