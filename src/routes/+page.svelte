@@ -208,29 +208,34 @@
       <h2 class="italic font-serif text-xl text-zinc-200">
         For personal or business inquiries. Only say nice things.
       </h2>
-      <form class="w-full flex flex-col mt-8">
+      <form class="w-full flex flex-col mt-8" action="?/contact" method="POST">
         <div class="w-full flex flex-col gap-4 lg:flex-row justify-stretch>">
           <input
             type="text"
             placeholder="Name"
+            name="name"
             class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg flex-1"
+            required
           />
           <input
             type="email"
             placeholder="E-Mail"
+            name="email"
             class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg flex-1"
+            required
           />
         </div>
         <textarea
           placeholder="Message"
+          name="message"
           class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg mt-4 h-48"
+          required
         ></textarea>
-        <a
+        <button
           class="bg-purple-500 text-zinc-200 p-4 mt-4 font-bold rounded-full hover:shadow-[0px_0px_10px_0px_rgba(161,103,234,0.60)] transition-shadow ring-zinc-200 active:ring-3"
-          href="mailto:nia@3nt3.de"
         >
           SEND IT <Fa class="inline" icon={faPaperPlane} />
-        </a>
+        </button>
       </form>
     </div>
   </div>
