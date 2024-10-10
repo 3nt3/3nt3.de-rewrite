@@ -2,12 +2,14 @@
   import Carousel from "../components/Carousel.svelte";
   import Fa from "svelte-fa";
   import {
-    faPaperPlane
+    faPaperPlane,
+    faGraduationCap,
+    faWrench
   } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <nav
-  class="sticky top-0 w-screen flex bg-zinc-900 h-20 z-30 lg:px-40 px-20 items-center text-lg text-zinc-300"
+  class="sticky top-0 w-screen flex bg-zinc-900 h-20 z-30 lg:px-40 px-8 items-center text-lg text-zinc-300"
 >
   <ul class="flex justify-between w-full">
     <li class="font-display text-purple-400 text-xl">
@@ -15,12 +17,12 @@
     </li>
     <ul class="flex gap-8 font-bold">
       <li class=""><a href="#about">About</a></li>
-      <li class=""><a href="/">Contact</a></li>
+      <li class=""><a href="#contact">Contact</a></li>
     </ul>
   </ul>
 </nav>
 <main
-  class="flex lg:h-[90vh] items-center justify-center bg-zinc-950 lg:p-40 px-20 py-40"
+  class="flex lg:h-[90vh] items-center justify-center bg-zinc-950 lg:p-40 px-8 py-40"
 >
   <div class="flex h-full lg:items-center justify-between w-full z-10">
     <div class="flex flex-col justify-start flex-1 lg:-mr-40">
@@ -79,7 +81,7 @@
   <!-- </div> -->
 </main>
 <section
-  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-40 px-20 pt-20 z-10 pb-10"
+  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-40 px-8 pt-20 z-10 pb-10"
   id="about"
 >
   <div
@@ -121,10 +123,10 @@
         <div class="w-[65%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Data-Science/Web-Scraping
         </div>
-        <div class="w-[42%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+        <div class="w-[43%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Embedded
         </div>
-        <div class="w-[30%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+        <div class="w-[42%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Mechanical Eng.
         </div>
       </div>
@@ -135,7 +137,7 @@
     </section>
   </div>
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-20 z-10 py-12">
+<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-8 z-10 py-12">
   <h1
     class="font-display bg-clip-text text-transparent bg-display-gradient-lighter text-5xl max-w-fit mx-auto"
   >
@@ -146,7 +148,49 @@
   </h2>
   <Carousel class="mt-10"/>
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:p-40 lg:pt-12 p-20 z-10 pt-12">
+<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-8 z-10 py-12">
+  <div class="flex justify-center gap-8 lg:flex-row flex-col">
+    <div class="flex-1 bg-purple-500 p-8 rounded-xl">
+      <h3 class="font-display text-4xl text-purple-200">
+        EDUCATION <Fa class="inline ml-4" icon={faGraduationCap} />
+      </h3>
+      <div class="p-2 text-lg">
+        <ul class="flex flex-col gap-2 mt-4 border-dashed border-l-2 border-purple-200">
+          {#each ["2015–2023 Abitur, Gymnasium Haan", "2023–2024 B. Sc., Computer Engineering, Cologne University of Applied Sciences (dropped out)", "2024–now B. Eng., Mechanical Engineering, Bochum University of Applied Sciences"] as item}
+            <li class="flex gap-4">
+              <div class="mt-1 -ml-2 w-4 h-4 rounded-full bg-purple-200"> </div>
+              <div class="flex-1">
+                <span class="font-bold">{item.split(",")[0]},</span> {item.split(",").slice(1).join(",")}
+              </div>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    </div>
+    <div class="flex-1 bg-purple-500 p-8 rounded-xl">
+      <h3 class="font-display text-4xl text-purple-200">
+        WORK <Fa class="inline ml-4" icon={faWrench} />
+      </h3>
+      <div class="p-2 text-lg">
+        <ul class="flex flex-col gap-2 mt-4 border-dashed border-l-2 border-purple-200">
+          {#each ["2019–2023, Newspaper Delivery Job (2 hours/week)",
+                  "2023–2024, Working Student Full-Stack Development (React, PHP), Biz Factory GmbH (20 hours/week)",
+                  "2024, Working Student DevOps (Linux, PHP, Docker), Check24 Ferienwohnungen GmbH (16 hours/week)",
+                  "2024–now, Dual Student Mechanical Engineering, Rheinbahn AG (39 hours/week)"
+                  ] as item}
+            <li class="flex gap-4">
+              <div class="mt-1 -ml-2 w-4 h-4 rounded-full bg-purple-200"> </div>
+              <div class="flex-1">
+                <span class="font-bold">{item.split(",")[0]},</span> {item.split(",").slice(1).join(",")}
+              </div>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-zinc-200 bg-zinc-950 lg:p-40 lg:pt-12 px-8 z-10 pt-12" id="contact">
   <div class="bg-zinc-900 p-12 rounded-xl gap-16 flex">
     <div class="w-2/6 min-h-[300px] hidden lg:block text-clip">
       <h1
@@ -159,7 +203,7 @@
     </div>
     <div class="flex flex-col w-full items-center">
       <h1 class="font-display text-5xl bg-display-gradient-lighter bg-clip-text text-transparent">
-        CONTACT ME
+        CONTACT
       </h1>
       <h2 class="italic font-serif text-xl text-zinc-200">
         For personal or business inquiries. Only say nice things.
@@ -184,7 +228,7 @@
         <button
           class="bg-purple-500 text-zinc-200 p-4 mt-4 font-bold rounded-full hover:shadow-[0px_0px_10px_0px_rgba(161,103,234,0.60)] transition-shadow ring-zinc-200 active:ring-3"
         >
-          GO FOR IT <Fa class="inline" icon={faPaperPlane} />
+          SEND IT <Fa class="inline" icon={faPaperPlane} />
         </button>
       </form>
     </div>
