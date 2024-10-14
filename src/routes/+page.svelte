@@ -85,15 +85,15 @@
   id="about"
 >
   <div
-    class="flex lg:flex-row flex-col-reverse lg:gap-16 gap-8 items-center lg:items-stretch"
+    class="flex xl:flex-row flex-col-reverse xl:gap-16 gap-8 items-center xl:items-stretch"
   >
     <div
-      class="lg:w-2/6 w-full lg:h-auto rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative overflow-hidden"
+      class="xl:w-2/6 w-full lg:h-auto rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative overflow-hidden"
     >
       <img
         src="/portrait.jpg"
         alt="Portrait of myself"
-        class="rounded-xl w-full h-96 lg:h-full object-cover overflow-hidden"
+        class="rounded-xl w-full h-96 xl:h-full object-cover overflow-hidden"
       />
       <span class="absolute bottom-4 ml-4 z-10 font-serif text-xl">That's me!</span>
     </div>
@@ -108,7 +108,7 @@
       <p class="font-serif text-xl text-zinc-200">
         My experience stems from great personal interest in everything
         engineering/computer related since childhood. I have been programming as
-        a pastime since 2013. My aspiration is basically to know everything.
+        a pastime since 2013.
       </p>
       <div class="flex flex-col gap-4 w-full items-end mt-4">
         <div class="w-[90%] font-bold bg-amber-500 px-4 py-2 rounded-lg">

@@ -47,6 +47,23 @@
     //   faIcons: [],
     // },
     {
+      title: "Homemade Electric Cargo Bike",
+      description:
+        "A cargo bike I built with a friend. It's made from a regular bike and steel tubing. It can carry a EURO pallet. Plans by Phil Vandelay",
+      image: "bike.webp",
+      faIcons: [faBicycle, faWrench],
+      icons: []
+    },
+    {
+      title: "Smartification of a Label Printer",
+      description:
+        "Assembly of a Raspberry Pi Zero W and a Brother QL-800 to add wifi, shortcut buttons and a web interface to the printer.",
+      image: "printer.webp",
+      link: "https://github.com/3nt3/labelpi",
+      faIcons: [faPython, faWrench],
+      icons: []
+    },
+    {
       title: "Gymhaan Tutoring Website",
       description:
         "A full-stack project for my school to help connect students with tutors. Built with React and Next.js",
@@ -65,14 +82,6 @@
       faIcons: [faC, faRust],
     },
     {
-      title: "Homemade Electric Cargo Bike",
-      description:
-        "A cargo bike I built with a friend. It's made from a regular bike and steel tubing. It can carry a EURO pallet. Plans by Phil Vandelay",
-      image: "bike.webp",
-      faIcons: [faBicycle, faWrench],
-      icons: []
-    },
-    {
       title: "Monster Price Scraping",
       description:
         "A series of webscrapers and a mobile app to help me find the best deals on Monster Energy drinks. Built with Rust and Flutter.",
@@ -86,9 +95,10 @@
   let index = 0;
 </script>
 
-<MediaQuery query="(max-width: 1024px)" let:matches>
+<MediaQuery query={['(max-width: 768px)', '(min-width: 768px) and (max-width: 1280px)', '(min-width: 1280px)']} let:matches>
+  {@const [mobile, tablet, desktop] = matches}
   <Splide
-    options={{  perPage: matches ? 2 : 3, perMove: matches ? 2 : 3 }}
+    options={{  perPage: mobile ? 1 : (tablet ? 2 : 3), perMove: 1 }}
     class={className}
   >
     {#each projects as p}
