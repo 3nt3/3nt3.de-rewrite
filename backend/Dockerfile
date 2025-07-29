@@ -1,0 +1,24 @@
+# Start from the official Golang image (with go installed)
+FROM golang:1.24
+
+# Set the Current Working Directory inside the container
+WORKDIR /app
+
+# Install necessary tools (like Air for live reload in development)
+RUN go install github.com/air-verse/air@latest
+
+# Copy go.mod and go.sum files first
+COPY go.mod go.sum ./
+
+# Download all dependencies (better cache usage)
+RUN go mod download
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose application port (adjust if needed)
+EXPOSE 8000
+
+# Command to run the app with hot reload
+CMD ["air"]
+
