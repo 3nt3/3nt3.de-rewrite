@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inter&family=Rubik:wght@800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --font-display: "Rubik", sans-serif;
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Inter", sans-serif;
 
+  --background-image-display-gradient: linear-gradient(267deg, #A167EA 37.5%, #C285FF 60.44%, #3F43A0 97%);
+  --background-image-display-gradient-lighter: linear-gradient(267deg, rgba(192,159,255,1) 0%, rgba(194,133,255,1) 29%, rgba(106,110,198,1) 60%);
+}
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
