@@ -10,6 +10,7 @@ import (
 
 func GetBlogPost(c *gin.Context) {
 	slug := c.Param("slug")
+	stripped := c.Query("stripped")
 
 	// check if application/json is before text/html in the Accept header
 	json := false
@@ -35,6 +36,11 @@ func GetBlogPost(c *gin.Context) {
 		log.Errorf("Error fetching post: %v", err)
 		c.JSON(500, gin.H{"error": "Internal Server Error"})
 		return
+	}
+
+	if stripped == "true" {
+		// strip HTML from content
+		p.HTML = ""
 	}
 
 	c.JSON(200, p)
