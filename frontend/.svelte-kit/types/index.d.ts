@@ -1,19 +1,20 @@
 type DynamicRoutes = {
-	
+	"/blog/[slug]": { slug: string }
 };
 
 type Layouts = {
-	"/": undefined;
-	"/blog": undefined
+	"/": { slug?: string };
+	"/blog": { slug?: string };
+	"/blog/[slug]": { slug: string }
 };
 
-export type RouteId = "/" | "/blog";
+export type RouteId = "/" | "/blog" | "/blog/[slug]";
 
 export type RouteParams<T extends RouteId> = T extends keyof DynamicRoutes ? DynamicRoutes[T] : Record<string, never>;
 
 export type LayoutParams<T extends RouteId> = Layouts[T] | Record<string, never>;
 
-export type Pathname = "/" | "/blog";
+export type Pathname = "/" | "/blog" | `/blog/${string}` & {};
 
 export type ResolvedPathname = `${"" | `/${string}`}${Pathname}`;
 

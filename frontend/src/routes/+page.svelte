@@ -18,7 +18,7 @@
   <div class="flex h-full lg:items-center justify-between w-full z-10">
     <div class="flex flex-col justify-start flex-1 lg:-mr-40">
       <h1
-        class="font-display text-8xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
+        class="font-display font-bold text-8xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
       >
         Hi there,
       </h1>
@@ -94,7 +94,7 @@
       class="flex-1 flex flex-col gap-4 bg-zinc-900 p-8 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow"
     >
       <h1
-        class="font-display text-5xl -ml-1 bg-clip-text text-transparent bg-display-gradient-lighter"
+        class="font-display font-bold text-5xl -ml-1 bg-clip-text text-transparent bg-display-gradient-lighter"
       >
         Passionate about software development since forever.
       </h1>
@@ -129,7 +129,7 @@
 </section>
 <section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-8 z-10 py-12">
   <h1
-    class="font-display bg-clip-text text-transparent bg-display-gradient-lighter text-5xl max-w-fit mx-auto"
+    class="font-display font-bold bg-clip-text text-transparent bg-display-gradient-lighter text-5xl max-w-fit mx-auto"
   >
     PROJECTS
   </h1>
@@ -141,7 +141,7 @@
 <section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-8 z-10 py-12">
   <div class="flex justify-center gap-8 lg:flex-row flex-col">
     <div class="flex-1 bg-purple-500 p-8 rounded-xl">
-      <h3 class="font-display text-4xl text-purple-200">
+      <h3 class="font-display font-bold text-4xl text-purple-200">
         EDUCATION <Fa class="inline ml-4" icon={faGraduationCap} />
       </h3>
       <div class="p-2 text-lg">
@@ -161,7 +161,7 @@
       </div>
     </div>
     <div class="flex-1 bg-purple-500 p-8 rounded-xl">
-      <h3 class="font-display text-4xl text-purple-200">
+      <h3 class="font-display font-bold text-4xl text-purple-200">
         WORK <Fa class="inline ml-4" icon={faWrench} />
       </h3>
       <div class="p-2 text-lg">
@@ -189,7 +189,7 @@
   <div class="bg-zinc-900 p-12 rounded-xl gap-16 flex">
     <div class="w-2/6 min-h-[300px] hidden lg:block text-clip">
       <h1
-        class="font-display text-zinc-500 text-5xl break-all [word-spacing: -20px] text-block select-none aria-hidden"
+        class="font-display font-bold text-zinc-500 text-5xl break-all [word-spacing: -20px] text-block select-none aria-hidden"
       >
         LEAVE A MESSAGE AT THE TONE — LEAVE A MESSAGE AT THE TONE — LEAVE A
         MESSAGE AT THE TONE
@@ -197,7 +197,7 @@
     </div>
     <div class="flex flex-col w-full items-center">
       <h1
-        class="font-display text-5xl bg-display-gradient-lighter bg-clip-text text-transparent"
+        class="font-display font-bold text-5xl bg-display-gradient-lighter bg-clip-text text-transparent"
       >
         CONTACT
       </h1>
@@ -227,7 +227,9 @@
           class="bg-zinc-800 border-zinc-700 border-2 text-zinc-200 p-4 rounded-lg mt-4 h-48"
           required
         ></textarea>
-        <div class="flex flex-col md:flex-row md:justify-evenly mt-4 md:items-center justify-center gap-4">
+        <div
+          class="flex flex-col md:flex-row md:justify-evenly mt-4 md:items-center justify-center gap-4"
+        >
           <div class="flex-1 flex justify-center">
             <HCaptcha
               sitekey={"e190725a-e624-4dc0-a10c-622a0524443e"}

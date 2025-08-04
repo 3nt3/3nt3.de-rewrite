@@ -26,8 +26,6 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const MAIL_PASSWORD: string;
-	export const HCAPTCHA_SECRET: string;
 	export const SHELL: string;
 	export const npm_command: string;
 	export const LSCOLORS: string;
@@ -139,7 +137,6 @@ declare module '$env/static/private' {
 	export const DRAWDEFAULT: string;
 	export const KITTY_INSTALLATION_DIR: string;
 	export const npm_node_execpath: string;
-	export const npm_config_engine_strict: string;
 	export const OLDPWD: string;
 	export const NODE_ENV: string;
 }
@@ -173,8 +170,6 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		MAIL_PASSWORD: string;
-		HCAPTCHA_SECRET: string;
 		SHELL: string;
 		npm_command: string;
 		LSCOLORS: string;
@@ -286,7 +281,6 @@ declare module '$env/dynamic/private' {
 		DRAWDEFAULT: string;
 		KITTY_INSTALLATION_DIR: string;
 		npm_node_execpath: string;
-		npm_config_engine_strict: string;
 		OLDPWD: string;
 		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
