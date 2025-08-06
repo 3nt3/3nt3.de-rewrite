@@ -22,7 +22,7 @@
           </span>
         </p>
       </div>
-      <div class="bg-purple-500 flex-1 rounded-md"></div>
+      <div class="bg-zinc-200 flex-1"></div>
     </div>
     {@html post.html}
   </article>

@@ -30,8 +30,9 @@ func GetParsedPost(path string) (Post, error) {
 		return Post{}, err
 	}
 
-	re := regexp.MustCompile(`.*/?(.*)(\.md)?$`)
-	post.Slug = re.ReplaceAllString(path, "$1")
+	// extract slug from full file path
+	re := regexp.MustCompile(`(?:(.*(\/))|^)(.+)\.md$`)
+	post.Slug = re.ReplaceAllString(path, "$3")
 
 	b, err := os.ReadFile(strings.TrimSuffix(path, ".md") + ".html")
 	post.HTML = string(b)
