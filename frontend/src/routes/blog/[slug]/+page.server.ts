@@ -1,7 +1,5 @@
 import type { PageLoad } from "../../$types";
 
-const BACKEND_URL = 'http://localhost:8000';
-
 type Post = {
   title: string;
   html: string;

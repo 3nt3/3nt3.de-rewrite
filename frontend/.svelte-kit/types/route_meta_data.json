@@ -6,6 +6,7 @@
 		"src/routes/+layout.ts"
 	],
 	"/blog": [
+		"src/routes/blog/+page.server.ts",
 		"src/routes/+layout.ts"
 	],
 	"/blog/[slug]": [

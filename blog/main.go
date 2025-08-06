@@ -26,6 +26,9 @@ func main() {
 	r.Use(ginLoggerMiddleware(), gin.Recovery())
 
 	r.GET("/blog/:slug", routes.GetBlogPost)
+	r.GET("/blog", routes.GetBlogPosts)
+	r.GET("/blog/:slug/:filename", routes.GetBlogPostFile)
+	r.GET("/blog/:slug/cover", routes.GetBlogPostCover)
 
 	// generate HTML for existing markdown files
 	log.Info("Generating HTML for existing posts...")

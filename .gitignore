@@ -23,18 +23,18 @@ vite.config.ts.timestamp-*
 *.dylib
 
 # Test binary, built with `go test -c`
-backend/*.test
+blog/*.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
-backend/*.out
+blog/*.out
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
 # Go workspace file
-backend/go.work
+blog/go.work
 
-backend/tmp
+blog/tmp
 
 # End of https://www.toptal.com/developers/gitignore/api/go
 
