@@ -16,10 +16,13 @@ func WatchFiles(dirname string) {
 
 	r := regexp.MustCompile(`\.md$`)
 	w.AddFilterHook(watcher.RegexFilterHook(r, false))
+	w.FilterOps(watcher.Move, watcher.Rename, watcher.Create, watcher.Write, watcher.Remove)
 
 	if err := w.AddRecursive(dirname); err != nil {
 		log.Fatalf("Failed to add recursive watch: %v", err)
 	}
+
+	log.Infof("Watching directory: %s", dirname)
 
 	go func() {
 		for {
@@ -31,13 +34,14 @@ func WatchFiles(dirname string) {
 			case err := <-w.Error:
 				log.Fatal(err)
 			case <-w.Closed:
+				log.Info("Watcher closed")
 				return
 			}
 		}
 	}()
 
 	// Start the watching process - it'll check for changes every 100ms.
-	if err := w.Start(time.Millisecond * 1000); err != nil {
+	if err := w.Start(time.Millisecond * 100); err != nil {
 		log.Fatalf("Failed to start watcher: %v", err)
 	}
 }
@@ -75,6 +79,7 @@ func handleFile(path string) error {
 
 func GenerateHTMLForExistingPosts(dirname string) error {
 	err := godirwalk.Walk(dirname, &godirwalk.Options{
+		FollowSymbolicLinks: true,
 		Callback: func(osPathname string, de *godirwalk.Dirent) error {
 			log.Debug("%s %s\n", de.ModeType(), osPathname)
 
