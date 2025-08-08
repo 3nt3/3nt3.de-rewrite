@@ -21,7 +21,7 @@
 </script>
 
 <main
-  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-10 px-8 pt-10 z-10 pb-10 text-lg"
+  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-10 px-8 pt-10 z-10 pb-10 text-lg min-h-[calc(100vh-(var(--spacing)*20))]"
   id="about"
 >
   <h1 class="font-sm font-bold text-5xl text-purple-500">RECENT POSTS</h1>
