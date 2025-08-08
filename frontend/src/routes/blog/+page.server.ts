@@ -9,7 +9,7 @@ type Post = {
   date: string;
 };
 
-function fetchPosts(): Promise<Post> {
+function fetchPosts(): Promise<Post[]> {
   return fetch(`${BACKEND_URL}/blog?n=5`, { headers: { 'Accept': 'application/json' } })
     .then(response => {
       if (!response.ok) {

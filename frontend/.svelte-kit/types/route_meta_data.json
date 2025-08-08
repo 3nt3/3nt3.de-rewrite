@@ -12,5 +12,8 @@
 	"/blog/[slug]": [
 		"src/routes/blog/[slug]/+page.server.ts",
 		"src/routes/+layout.ts"
+	],
+	"/blog/[slug]/[...rest]": [
+		"src/routes/blog/[slug]/[...rest]/+server.ts"
 	]
 }
