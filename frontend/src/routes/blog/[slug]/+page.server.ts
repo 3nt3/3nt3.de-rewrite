@@ -21,6 +21,7 @@ function fetchPost(slug: string): Promise<Post> {
       html: data.html,
       tags: data.tags,
       date: data.date,
+      slug
     }));
 }
 
