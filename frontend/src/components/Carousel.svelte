@@ -16,6 +16,7 @@
     faBicycle,
     faWrench,
     type IconDefinition,
+    faMicrochip,
   } from "@fortawesome/free-solid-svg-icons";
   import {
     faReact,
@@ -46,6 +47,15 @@
     //   icons: ["./SvelteLogo", "./TailwindLogo"],
     //   faIcons: [],
     // },
+    {
+      title: "FS7 Extra User Buttons",
+      description:
+        "Reversing of the FS7's handle's protocol and emulation of it using a WCH32 RISC-V microcontroller on a custom PCB.",
+      image: "pcb overhead.webp",
+      faIcons: [faRust, faMicrochip],
+      link: "/blog/reversing-fs7-comms",
+      icons: []
+    },
     {
       title: "Homemade Electric Cargo Bike",
       description:
