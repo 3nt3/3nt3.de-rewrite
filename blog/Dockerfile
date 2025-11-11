@@ -1,9 +1,5 @@
 # Start from the official Golang image (with go installed)
-<<<<<<< HEAD
-FROM golang:1.25
-=======
 FROM golang:1.25-bookworm
->>>>>>> 7036d03a4f5863905236c5540abcd5343ca1efcb
 
 # Set the Current Working Directory inside the container
 WORKDIR /app

@@ -1,6 +1,8 @@
+export const prerender = false;
+
 import type { PageLoad } from "../../$types";
 
-const BACKEND_URL = 'http://localhost:8000';
+const BACKEND_URL = 'https://3nt3.de/api';
 
 type Post = {
   title: string;
