@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "2347da4fd1c8b79e",
+    "type": "split",
+    "children": [
+      {
+        "id": "78ebec11e870c6aa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d0550dae74b2d30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "reversing-fs7-comms.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "reversing-fs7-comms"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2964616a7284c3e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "e035a7e529de02bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "45cf3566e6e2326c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5bae31860cf16572",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f50faf97704d0027",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d24927709ec68520",
+    "type": "split",
+    "children": [
+      {
+        "id": "a30f17f47dfca051",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9ca85246cbcbd55",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "reversing-fs7-comms.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for reversing-fs7-comms"
+            }
+          },
+          {
+            "id": "d72e5c7016cb2845",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "reversing-fs7-comms.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from reversing-fs7-comms"
+            }
+          },
+          {
+            "id": "fa4d83fb587fa61a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "948298a7033c9355",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "reversing-fs7-comms.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of reversing-fs7-comms"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "5d0550dae74b2d30",
+  "lastOpenFiles": [
+    "reversing-fs7-comms/clamp.png",
+    "reversing-fs7-comms.md",
+    "reversing-fs7-comms/pcb overhead.png",
+    "reversing-fs7-comms/traces.png",
+    "reversing-fs7-comms/pcb-hero.png",
+    "reversing-fs7-comms/stm32.png",
+    "reversing-fs7-comms/sigrok-button-pressed.png",
+    "reversing-fs7-comms/cover.png",
+    "reversing-fs7-comms/oscilloscope.png",
+    "reversing-fs7-comms/probes.png",
+    "reversing-fs7-comms/rigged-fs7.png",
+    "reversing-fs7-comms",
+    "reversing-fs7-comms.html",
+    "Untitled.html",
+    "Welcome.md"
+  ]
+}
