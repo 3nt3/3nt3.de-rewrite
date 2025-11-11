@@ -1,15 +1,31 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import type { PageProps } from "./$types";
+  import hljs from "highlight.js";
+  import "highlight.js/styles/github-dark.css";
 
-  let { data }: PageProps = $props();
+  let { data, content }: PageProps = $props();
+  let container;
 
   const { post } = data;
+
+  onMount(() => {
+    // Highlight code blocks after the component is mounted
+    const codeBlocks = document.querySelectorAll("#post-content pre code");
+    codeBlocks.forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  });
 </script>
 
 <main
   class="flex flex-col items-center justify-center bg-zinc-950 pb-12 text-zinc-200 min-h-screen"
 >
-  <img class="w-full h-80 object-cover" src={ post.slug + '/cover'} alt="Cover" />
+  <img
+    class="w-full h-80 object-cover"
+    src={post.slug + "/cover"}
+    alt="Cover"
+  />
   <article class="max-w-[650px] w-full flex gap-3 flex-col leading-7 mt-7">
     <div class="flex gap-4">
       <div>
@@ -27,7 +43,7 @@
       </div>
       <div class="bg-zinc-200 flex-1"></div>
     </div>
-    <div id="post-content">
+    <div id="post-content" bind:this={container}>
       {@html post.html}
     </div>
   </article>
@@ -40,6 +56,52 @@
     gap: 1rem;
     img {
       border-radius: 0.25rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #c27aff;
+      font-family: "Space Mono", monospace;
+      font-weight: 600;
+    }
+
+    a {
+      color: #c27aff;
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    pre {
+      border-radius: 0.5rem;
+      font-family: "Fira Code", monospace;
+
+      font-size: 0.8rem;
+
+      line-height: 1.5;
+    }
+
+    table {
+      background-color: #1e1e1e;
+      margin: auto 0;
+
+      border-radius: 0.5rem;
+      border: 1px solid #333;
+
+      tr {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #333;
+      }
     }
   }
 </style>
