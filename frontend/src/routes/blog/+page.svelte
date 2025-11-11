@@ -20,10 +20,11 @@
   console.log(data);
 </script>
 
-<main
-  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-10 px-8 pt-10 z-10 pb-10 text-lg min-h-[calc(100vh-(var(--spacing)*20))]"
+<div
+  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-10 px-8 pt-10 z-10 pb-10 text-lg min-h-[calc(100vh-(var(--spacing)*20))] flex justify-center"
   id="about"
 >
+<main class="w-full max-w-[1600px]">
   <h1 class="font-sm font-bold text-5xl text-purple-500">RECENT POSTS</h1>
   <p>In chronological order. WIP.</p>
 
@@ -59,3 +60,4 @@
     {/each}
   {/each}
 </main>
+</div>

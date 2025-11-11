@@ -6,13 +6,13 @@
   const { post } = data;
 </script>
 
-<main class="flex flex-col items-center justify-center bg-zinc-950 pb-12 text-zinc-200 min-h-screen">
+<main class="flex flex-col items-center bg-zinc-950 pb-12 text-zinc-200 min-h-screen">
   <img
     class="w-full h-80 object-cover"
-    src="./fs7/cover"
+    src={`${post.slug}/cover`}
     alt="Cover"
   />
-  <article class="max-w-[650px] w-full flex gap-3 flex-col leading-7 mt-7">
+  <article class="max-w-[650px] w-full flex gap-3 flex-col leading-7 mt-7 mx-12">
     <div class="flex gap-4">
       <div>
         <h1 class="text-4xl font-sm font-bold">{post.title}</h1>
