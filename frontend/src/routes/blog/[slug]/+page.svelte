@@ -23,8 +23,7 @@
   <title>{post.title} | Nia Schlegel</title>
   <meta name="description" content={post.description} />
   <meta property="og:title" content={post.title + " | Nia Schlegel"} />
-  <meta property="og:description" content={post.description} />
-  <meta property="og:image" content={post.slug + "/cover"} />
+  <meta property="og:image" content={"https://3nt3.de/blog/" + post.slug + "/cover"} />
   <meta property="og:type" content="article" />
 </svelte:head>
 
