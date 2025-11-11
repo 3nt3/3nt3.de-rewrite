@@ -22,7 +22,7 @@
 <svelte:head>
   <title>{post.title} | Nia Schlegel</title>
   <meta name="description" content={post.description} />
-  <meta property="og:title" content={post.title + " | My Blog"} />
+  <meta property="og:title" content={post.title + " | Nia Schlegel"} />
   <meta property="og:description" content={post.description} />
   <meta property="og:image" content={post.slug + "/cover"} />
   <meta property="og:type" content="article" />
