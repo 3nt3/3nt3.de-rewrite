@@ -18,6 +18,16 @@
   });
 </script>
 
+<!-- head -->
+<svelte:head>
+  <title>{post.title} | Nia Schlegel</title>
+  <meta name="description" content={post.description} />
+  <meta property="og:title" content={post.title + " | My Blog"} />
+  <meta property="og:description" content={post.description} />
+  <meta property="og:image" content={post.slug + "/cover"} />
+  <meta property="og:type" content="article" />
+</svelte:head>
+
 <main
   class="flex flex-col items-center justify-center bg-zinc-950 pb-12 text-zinc-200 min-h-screen p-8"
 >
