@@ -48,7 +48,7 @@ func main() {
 	go blog.WatchFiles(dirname)
 
 	// Start the server on port 8080
-	log.Info("Starting server on port 8080...")
+	log.Info("Starting server on port 8000...")
 	if err := r.Run(":8000"); err != nil {
 		log.Fatalf("Failed to run server: %v", err)
 	}

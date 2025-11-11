@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { BACKEND_URL } from "$lib/constants";
 import type { PageLoad } from "../../$types";
 
