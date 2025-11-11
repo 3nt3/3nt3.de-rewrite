@@ -83,7 +83,7 @@ func GenerateHTMLForExistingPosts(dirname string) error {
 		Callback: func(osPathname string, de *godirwalk.Dirent) error {
 			log.Debug("%s %s\n", de.ModeType(), osPathname)
 
-			if !de.IsRegular() || !strings.HasSuffix(osPathname, ".md") {
+			if !(de.IsRegular() || de.IsSymlink()) || !strings.HasSuffix(osPathname, ".md") {
 				log.Debugf("Skipping non-regular file or non-markdown file: %s", osPathname)
 				return nil
 			}

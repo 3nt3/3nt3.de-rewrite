@@ -1,9 +1,11 @@
 services:
   app:
-    tty: true # colored output
+    # tty: true # colored output
     build: .
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8089:8000"
     volumes:
       - .:/app
-      - /home/ente/src/3nt3/blog:/app/posts
+      - /home/ente/blog:/app/posts
+    environment:
+      - GIN_MODE=release
