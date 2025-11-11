@@ -19,7 +19,7 @@
 </script>
 
 <main
-  class="flex flex-col items-center justify-center bg-zinc-950 pb-12 text-zinc-200 min-h-screen"
+  class="flex flex-col items-center justify-center bg-zinc-950 pb-12 text-zinc-200 min-h-screen p-8"
 >
   <img
     class="w-full h-80 object-cover"
