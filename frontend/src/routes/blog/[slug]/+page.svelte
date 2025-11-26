@@ -35,7 +35,7 @@
     src={post.slug + "/cover"}
     alt="Cover"
   />
-  <article class="max-w-[650px] w-full flex gap-3 flex-col leading-7 mt-7">
+  <article class="max-w-[650px] w-full flex gap-3 flex-col leading-7 mt-7 mx-12">
     <div class="flex gap-4">
       <div>
         <h1 class="text-4xl font-sm font-bold">{post.title}</h1>

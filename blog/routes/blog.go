@@ -98,9 +98,9 @@ func GetBlogPosts(c *gin.Context) {
 		}
 	}
 
-	log.Infof("Fetched %d blog posts", len(posts))
+	log.Infof("Fetched %d blog posts", len(filteredPosts))
 
-	c.JSON(200, posts)
+	c.JSON(200, filteredPosts)
 }
 
 func GetBlogPostFile(c *gin.Context) {

@@ -8,6 +8,7 @@ type Post = {
   html: string;
   tags: string[];
   date: string;
+  slug: string;
 };
 
 function fetchPost(slug: string): Promise<Post> {

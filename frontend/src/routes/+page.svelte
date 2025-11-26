@@ -13,12 +13,12 @@
 </script>
 
 <main
-  class="flex lg:h-[90vh] items-center justify-center bg-zinc-950 lg:p-40 px-8 py-40"
+  class="flex lg:h-[90vh] items-center justify-center bg-zinc-950 lg:p-40 px-12 py-40"
 >
-  <div class="flex h-full lg:items-center justify-between w-full z-10">
+  <div class="flex h-full lg:items-center justify-between w-full max-w-[1600px] z-10">
     <div class="flex flex-col justify-start flex-1 lg:-mr-40">
       <h1
-        class="font-display font-bold text-8xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
+        class="font-display font-bold md:text-8xl text-6xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
       >
         Hi there,
       </h1>
@@ -47,7 +47,7 @@
       </h2>
 
       <a
-        class="block text-zinc-200 mt-8 mr-auto bg-purple-500 px-24 py-5 text-2xl rounded-full hover:shadow-[0px_0px_30px_0px_rgba(161,103,234,0.60)] transition-shadow ring-zinc-200 active:ring-3"
+        class="block text-zinc-200 mt-8 mr-auto bg-purple-500 px-24 py-5 md:text-2xl md:font-normal font-bold text-xl rounded-full hover:shadow-[0px_0px_30px_0px_rgba(161,103,234,0.60)] transition-shadow ring-zinc-200 active:ring-3"
         href="#about"
       >
         Find out more
@@ -72,11 +72,11 @@
   <!-- </div> -->
 </main>
 <section
-  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-40 px-8 pt-20 z-10 pb-10"
+  class="bg-zinc-950 text-zinc-200 lg:px-40 lg:pt-40 px-4 pt-20 z-10 pb-10 flex justify-center"
   id="about"
 >
   <div
-    class="flex xl:flex-row flex-col-reverse xl:gap-16 gap-8 items-center xl:items-stretch"
+    class="flex xl:flex-row flex-col-reverse xl:gap-16 gap-8 items-center xl:items-stretch max-w-[1600px]"
   >
     <div
       class="xl:w-2/6 w-full lg:h-auto rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow relative overflow-hidden"
@@ -94,7 +94,7 @@
       class="flex-1 flex flex-col gap-4 bg-zinc-900 p-8 rounded-xl hover:shadow-zinc-800 shadow-lg transition-shadow"
     >
       <h1
-        class="font-display font-bold text-5xl -ml-1 bg-clip-text text-transparent bg-display-gradient-lighter"
+        class="font-display font-bold md:text-5xl text-3xl -ml-1 bg-clip-text text-transparent bg-display-gradient-lighter"
       >
         Passionate about software development since forever.
       </h1>
@@ -127,7 +127,7 @@
     </section>
   </div>
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-8 z-10 py-12">
+<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-4 z-10 py-12 flex flex-col items-center">
   <h1
     class="font-display font-bold bg-clip-text text-transparent bg-display-gradient-lighter text-5xl max-w-fit mx-auto"
   >
@@ -136,10 +136,10 @@
   <h2 class="italic font-serif text-xl mx-auto max-w-fit">
     What I've been up to.
   </h2>
-  <Carousel class="mt-10" />
+  <Carousel class="mt-10 max-w-[1600px] w-full" />
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-8 z-10 py-12">
-  <div class="flex justify-center gap-8 lg:flex-row flex-col">
+<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-4 z-10 py-12 flex justify-center">
+  <div class="flex justify-center gap-8 lg:flex-row flex-col max-w-[1600px]">
     <div class="flex-1 bg-purple-500 p-8 rounded-xl">
       <h3 class="font-display font-bold text-4xl text-purple-200">
         EDUCATION <Fa class="inline ml-4" icon={faGraduationCap} />
@@ -183,10 +183,10 @@
   </div>
 </section>
 <section
-  class="text-zinc-200 bg-zinc-950 lg:p-40 lg:pt-12 px-8 z-10 pt-12"
+  class="text-zinc-200 bg-zinc-950 lg:p-40 lg:pt-12 px-4 z-10 pt-12 flex justify-center"
   id="contact"
 >
-  <div class="bg-zinc-900 p-12 rounded-xl gap-16 flex">
+  <div class="bg-zinc-900 p-12 rounded-xl gap-16 flex max-w-[1600px]">
     <div class="w-2/6 min-h-[300px] hidden lg:block text-clip">
       <h1
         class="font-display font-bold text-zinc-500 text-5xl break-all [word-spacing: -20px] text-block select-none aria-hidden"
