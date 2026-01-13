@@ -48,13 +48,21 @@
     //   faIcons: [],
     // },
     {
+      title: "OpenVaporphase",
+      description: "An open hardware vapor phase oven for hackers and makers.",
+      image: "openvaporphase.webp",
+      faIcons: [faWrench, faRust, faMicrochip],
+      link: "https://openvaporphase.lol",
+      icons: [],
+    },
+    {
       title: "FS7 Extra User Buttons",
       description:
         "Reversing of the FS7's handle's protocol and emulation of it using a WCH32 RISC-V microcontroller on a custom PCB.",
       image: "pcb overhead.webp",
       faIcons: [faRust, faMicrochip],
       link: "/blog/reversing-fs7-comms",
-      icons: []
+      icons: [],
     },
     {
       title: "Homemade Electric Cargo Bike",
@@ -62,7 +70,7 @@
         "A cargo bike I built with a friend. It's made from a regular bike and steel tubing. It can carry a EURO pallet. Plans by Phil Vandelay",
       image: "bike.webp",
       faIcons: [faBicycle, faWrench],
-      icons: []
+      icons: [],
     },
     {
       title: "Smartification of a Label Printer",
@@ -71,7 +79,7 @@
       image: "printer.webp",
       link: "https://github.com/3nt3/labelpi",
       faIcons: [faPython, faWrench],
-      icons: []
+      icons: [],
     },
     {
       title: "Gymhaan Tutoring Website",
@@ -105,10 +113,17 @@
   let index = 0;
 </script>
 
-<MediaQuery query={['(max-width: 768px)', '(min-width: 768px) and (max-width: 1280px)', '(min-width: 1280px)']} let:matches>
+<MediaQuery
+  query={[
+    "(max-width: 768px)",
+    "(min-width: 768px) and (max-width: 1280px)",
+    "(min-width: 1280px)",
+  ]}
+  let:matches
+>
   {@const [mobile, tablet, desktop] = matches}
   <Splide
-    options={{  perPage: mobile ? 1 : (tablet ? 2 : 3), perMove: 1 }}
+    options={{ perPage: mobile ? 1 : tablet ? 2 : 3, perMove: 1 }}
     class={className}
   >
     {#each projects as p}
@@ -120,7 +135,9 @@
         />
         <h2 class="max-w-fit mt-2 text-xl font-bold flex gap-1 wrap">
           {#if p.link}
-            <a href={p.link}>{p.title} <Fa icon={faLink} class="inline mx-1" /></a>
+            <a href={p.link}
+              >{p.title} <Fa icon={faLink} class="inline mx-1" /></a
+            >
           {:else}
             <span>{p.title}</span>
           {/if}
