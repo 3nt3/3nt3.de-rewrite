@@ -15,7 +15,9 @@
 <main
   class="flex lg:h-[90vh] items-center justify-center bg-zinc-950 lg:p-40 px-12 py-40"
 >
-  <div class="flex h-full lg:items-center justify-between w-full max-w-[1600px] z-10">
+  <div
+    class="flex h-full lg:items-center justify-between w-full max-w-[1600px] z-10"
+  >
     <div class="flex flex-col justify-start flex-1 lg:-mr-40">
       <h1
         class="font-display font-bold md:text-8xl text-6xl -ml-1 bg-clip-text text-transparent bg-display-gradient"
@@ -104,20 +106,20 @@
         a pastime since 2013.
       </p>
       <div class="flex flex-col gap-4 w-full items-end mt-4">
-        <div class="w-[90%] font-bold bg-amber-500 px-4 py-2 rounded-lg">
-          Frontend ★
-        </div>
-        <div class="w-[80%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
-          UI/UX Design
-        </div>
-        <div class="w-[75%] font-bold bg-amber-500 px-4 py-2 rounded-lg">
-          Backend ★
-        </div>
-        <div class="w-[60%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+        <div class="w-[90%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Mechanical Engineering
         </div>
-        <div class="w-[50%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+        <div class="w-[80%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
           Embedded/Electronics
+        </div>
+        <div class="w-[80%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+          Frontend
+        </div>
+        <div class="w-[80%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+          Backend
+        </div>
+        <div class="w-[70%] font-bold bg-indigo-600 px-4 py-2 rounded-lg">
+          UI/UX Design
         </div>
       </div>
       <p class="font-serif">★ Featured Skill</p>
@@ -127,7 +129,9 @@
     </section>
   </div>
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-4 z-10 py-12 flex flex-col items-center">
+<section
+  class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-4 z-10 py-12 flex flex-col items-center"
+>
   <h1
     class="font-display font-bold bg-clip-text text-transparent bg-display-gradient-lighter text-5xl max-w-fit mx-auto"
   >
@@ -138,7 +142,9 @@
   </h2>
   <Carousel class="mt-10 max-w-[1600px] w-full" />
 </section>
-<section class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-4 z-10 py-12 flex justify-center">
+<section
+  class="text-zinc-200 bg-zinc-950 lg:px-40 lg:py-12 px-4 z-10 py-12 flex justify-center"
+>
   <div class="flex justify-center gap-8 lg:flex-row flex-col max-w-[1600px]">
     <div class="flex-1 bg-purple-500 p-8 rounded-xl">
       <h3 class="font-display font-bold text-4xl text-purple-200">
